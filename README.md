@@ -2,6 +2,7 @@
 
 ### https://github.com/doyeon33/happy.git
 
+```
 echo "# happy" >> README.md
 git init
 git add README.md
