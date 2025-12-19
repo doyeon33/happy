@@ -1,0 +1,90 @@
+[hello.txt]
+ 1  git config --global --list
+    2  git config -- global --list
+    3  git config --global user.name "doyeon"
+    4  git config --global user.email "kimdoy10@gmail.com"
+    5  git config --global --list
+    6  got config --global --list
+    7  git config -- global --list
+	
+	깃 저장소 생성(최초 1회만)
+    8  git init
+	
+	폴더만들기
+    9  mkdir hello
+	
+	폴더의 모든목록 확인
+   10  ls -al
+   
+   폴더의 목록확인(숨김파일 미포함)
+     ls -l
+   
+   폴더 이동
+   11  cd hello
+   13  ls -al
+   14  cd ..
+   15  cd hello
+ 
+   깃 상태
+   17  git status
+   
+   깃에 관리 대상으로 포함
+   18  git add hello.txt
+   19  git status
+   
+   깃에 저장소에 저장
+   21  git commit -m "[hello.txt] new file"
+   
+   이력 상세 확인
+   22  git log
+   
+   이력 간략 확인
+   23  git log --oneline
+   
+   작업 이력 확인
+   24  history
+
+파일 복사본 만들기
+cp hello.txt hellox.txt
+
+현재 폴더의 모든 내용을 반영
+관리대상으로 만든다
+수정 새로운 파일을 스테이지 영역으로 이동
+git add .
+
+로그 한글 깨질때
+git config --global core.quotepath false
+
+커밋 후 수정한 파일 있을때 add+comit 동시에
+git commit -a -m "[ㅇㅇㅇ]파일 업로드함"
+
+태그 목록보기
+git tag
+
+태그 생성
+git tag 이름
+
+태그 위치의 커미 정보 확인
+git show 이름
+
+머지중일때 머지 취소(파일이 다를때 머지하면 충돌나서 확인 텍스트로 표시해줌)
+git merge --abort
+
+브랜치생성
+git branch 브랜치명
+
+브랜치간 이동
+git checkout 브랜치명
+git switch 브랜치명
+
+브랜치 삭제
+git branch -d 브랜치명
+
+br2만들면서 지금 브런치에서 체크아웃하겠다
+$ git checkout -b br-2
+
+모든 txt확장자
+*.txt 
+
+상위폴더/aa폴더/모든텍스트 파일복사
+cp ../aa/*.txt
